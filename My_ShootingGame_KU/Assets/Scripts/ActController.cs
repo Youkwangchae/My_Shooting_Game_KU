@@ -35,8 +35,11 @@ public class ActController : MonoBehaviour
 
         for (int i = 0; i < enemyList.Count; i++)
         {
-            if(enemyList[i])
+            if (enemyList[i])
+            {
                 enemyList[i].transform.Translate(-speed * Time.deltaTime, 0, 0);
+                enemyList[i].transform.Rotate(rotateVec * 2);
+            }            
         }
     }
 
